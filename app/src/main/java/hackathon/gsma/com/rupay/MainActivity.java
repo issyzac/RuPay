@@ -19,7 +19,9 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
+import hackathon.gsma.com.rupay.fragments.AccountFragment;
 import hackathon.gsma.com.rupay.fragments.HomeFragment;
+import hackathon.gsma.com.rupay.fragments.SavedFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -105,9 +107,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new HomeFragment(), "ONE");
-        adapter.addFragment(new HomeFragment(), "THREE");
-        adapter.addFragment(new HomeFragment(), "TWO");
+        adapter.addFragment(new HomeFragment(), "HOME");
+        adapter.addFragment(new SavedFragment(), "SAVED");
+        adapter.addFragment(new AccountFragment(), "ACCOUNT");
         viewPager.setAdapter(adapter);
     }
 
