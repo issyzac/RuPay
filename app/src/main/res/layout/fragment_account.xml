@@ -1,11 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Account Fragment"
-        android:layout_centerInParent="true"/>
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACCOUNT"
+                android:layout_marginLeft="16dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp">
+
+                <ImageView android:id="@+id/edit_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/pen"
+                    android:visibility="visible"/>
+
+                <ImageView android:id="@+id/check_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/check"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="2dp"
+            android:elevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <EditText android:id="@+id/fname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="John Michael"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_translucent"
+                android:background="@android:color/transparent"
+                android:paddingLeft="16dp"/>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="2dp"
+            android:elevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp">
+
+            <EditText android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="7168 687323"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_translucent"
+                android:background="@android:color/transparent"
+                android:paddingLeft="16dp"/>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="2dp"
+            android:elevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp">
+
+            <EditText android:id="@+id/pin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="****"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:inputType="numberPassword"
+                android:textColorHint="@color/black_translucent"
+                android:background="@android:color/transparent"
+                android:paddingLeft="16dp"/>
+
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="SAVE"
+            android:textSize="18sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/save_btn"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:background="@drawable/border_button2"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/transac_layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="60dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="VIEW TRANSACTION"
+            android:textSize="16sp"
+            android:id="@+id/transac_btn"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

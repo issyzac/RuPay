@@ -1,8 +1,10 @@
 package hackathon.gsma.com.rupay.api;
 
 import hackathon.gsma.com.rupay.datasets.BalanceResponce;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.Path;
 
@@ -37,5 +39,8 @@ public interface ApiServices {
 
     @GET("/api/v1/harambee")
     Call<String> getHarambeeList();
+
+    @GET("accounts/msisdn/{msisdn}/statemententries")
+    Call<ResponseBody> getStatement(@Path("msisdn") String msisdn);
 
 }
